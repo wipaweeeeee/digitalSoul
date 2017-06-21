@@ -1,0 +1,31 @@
+<html>
+	 <head>
+			<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+			<script type="text/javascript">
+				var socket = io.connect();
+
+				socket.on('soulOn', function () {
+					console.log('connected to chrome!');
+					soulAdded();
+				});
+
+				socket.on('soulOff', function() {
+					soulLeft();
+				})
+
+			</script>	
+	 </head>
+	
+	 <body style="margin: 0">
+	 
+	 	<!-- <div id="div1">
+			<p>my meatballs bring all the boys to the yard</p>
+	 	</div> -->
+	 	<!-- <button onclick="soulAdded()">soul added</button>
+	 	<button onclick="soulLeft()">soul left</button> -->
+	 	<canvas id="main" />
+		<script src="metaball.js"></script>
+	
+	 </body>
+	 
+</html>
